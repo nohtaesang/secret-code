@@ -1,0 +1,42 @@
+body{
+    
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width:200px;
+}
+
+.item{
+    position: relative;
+    display:flex;
+    align-items: center;
+    padding:4px 8px;
+    border-bottom:solid 1px black
+}
+
+.item:after{
+    position: absolute;
+    border:solid 1px black;
+    right:4px
+}
+
+.item:hover:after{
+    content:'open'
+}
+
+.item.open:after{
+    content:'close'
+}
+
+.context{
+    display:none;
+    position: absolute;
+    background-color: white;
+    border:solid 1px black;
+    top:calc(100% -10px);
+    right:4px;
+    padding:10px;
+    z-index: 1;
+}
